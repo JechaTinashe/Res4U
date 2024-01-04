@@ -1,0 +1,743 @@
+﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7AE2FD38-2459-4136-BF19-C6D5EB6D5F0F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>RES4U__Latest</RootNamespace>
+    <AssemblyName>RES4U__Latest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44309</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>packages\Newtonsoft.Json.13.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Accounts_Page.aspx" />
+    <Content Include="Authentication\css\bootstrap.min.css" />
+    <Content Include="Authentication\css\bootstrap\mixins\_border-radius.css" />
+    <Content Include="Authentication\css\bootstrap\mixins\_resize.css" />
+    <Content Include="Authentication\css\bootstrap\mixins\_screen-reader.css" />
+    <Content Include="Authentication\css\bootstrap\mixins\_transition.css" />
+    <Content Include="Authentication\css\bootstrap\mixins\_visibility.css" />
+    <Content Include="Authentication\css\bootstrap\utilities\_stretched-link.css" />
+    <Content Include="Authentication\css\bootstrap\_media.css" />
+    <Content Include="Authentication\css\style.css" />
+    <Content Include="Authentication\images\Forgot password-rafiki.png" />
+    <Content Include="Authentication\images\Forgot password.png" />
+    <Content Include="Authentication\images\Google.png" />
+    <Content Include="Authentication\images\LoginIS.png" />
+    <Content Include="Authentication\images\logo-no-background.png" />
+    <Content Include="Authentication\images\Mobile login-cuate.png" />
+    <Content Include="Authentication\images\Sign up-cuate.png" />
+    <Content Include="Authentication\js\bootstrap.min.js" />
+    <Content Include="Authentication\js\jquery.min.js" />
+    <Content Include="Authentication\js\main.js" />
+    <Content Include="Authentication\js\popper.js" />
+    <Content Include="ContactUs.aspx" />
+    <Content Include="FAQ.aspx" />
+    <Content Include="Favourites_Page.aspx" />
+    <Content Include="ForgotPassword.aspx" />
+    <Content Include="images\1\img_1.jpg" />
+    <Content Include="images\1\img_2.jpg" />
+    <Content Include="images\1\img_3.jpg" />
+    <Content Include="images\2\img_1.jpg" />
+    <Content Include="images\2\img_2.jpg" />
+    <Content Include="images\2\img_3.jpg" />
+    <Content Include="images\2\img_4.jpg" />
+    <Content Include="images\2\img_5.jpg" />
+    <Content Include="images\2\img_6.jpg" />
+    <Content Include="images\2\img_7.jpg" />
+    <Content Include="images\2\img_8.jpg" />
+    <Content Include="images\3\img_1.jpg" />
+    <Content Include="images\3\img_2.jpg" />
+    <Content Include="images\3\img_3.jpg" />
+    <Content Include="images\3\img_4.jpg" />
+    <Content Include="images\3\img_5.jpg" />
+    <Content Include="images\3\img_6.jpg" />
+    <Content Include="images\4\img_1.png" />
+    <Content Include="images\4\img_2.png" />
+    <Content Include="images\4\img_3.png" />
+    <Content Include="images\4\img_4.png" />
+    <Content Include="images\4\img_5.png" />
+    <Content Include="images\4\img_6.png" />
+    <Content Include="images\4\img_7.png" />
+    <Content Include="images\5\img_1.png" />
+    <Content Include="images\5\img_10.png" />
+    <Content Include="images\5\img_2.png" />
+    <Content Include="images\5\img_3.png" />
+    <Content Include="images\5\img_4.png" />
+    <Content Include="images\5\img_5.png" />
+    <Content Include="images\5\img_6.png" />
+    <Content Include="images\5\img_7.png" />
+    <Content Include="images\5\img_8.png" />
+    <Content Include="images\5\img_9.png" />
+    <Content Include="images\6\img_1.png" />
+    <Content Include="images\6\img_2.png" />
+    <Content Include="images\6\img_3.png" />
+    <Content Include="images\6\img_4.png" />
+    <Content Include="images\6\img_5.png" />
+    <Content Include="images\6\img_6.png" />
+    <Content Include="images\6\img_7.png" />
+    <Content Include="images\6\img_8.png" />
+    <Content Include="images\Forgot password-rafiki.png" />
+    <Content Include="images\Forgot password.png" />
+    <Content Include="images\Google.png" />
+    <Content Include="images\LoginIS.png" />
+    <Content Include="images\logo-no-background.png" />
+    <Content Include="images\Mobile login-cuate.png" />
+    <Content Include="images\Sign up-cuate.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\jquery.min.js" />
+    <Content Include="js\main.js" />
+    <Content Include="js\popper.js" />
+    <Content Include="Landing_Page.aspx" />
+    <Content Include="Landing_Page\assets\css\main.css" />
+    <Content Include="Landing_Page\assets\img\about-2.jpg" />
+    <Content Include="Landing_Page\assets\img\about.jpg" />
+    <Content Include="Landing_Page\assets\img\apple-touch-icon.png" />
+    <Content Include="Landing_Page\assets\img\blog\blog-1.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-2.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-3.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-4.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-5.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-6.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-author-2.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-author-3.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-author-4.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-author-5.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-author-6.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-author.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-inside-post.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-recent-1.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-recent-2.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-recent-3.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-recent-4.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\blog-recent-5.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\comments-1.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\comments-2.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\comments-3.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\comments-4.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\comments-5.jpg" />
+    <Content Include="Landing_Page\assets\img\blog\comments-6.jpg" />
+    <Content Include="Landing_Page\assets\img\breadcrumbs-bg.jpg" />
+    <Content Include="Landing_Page\assets\img\clients\client-1.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-2.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-3.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-4.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-5.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-6.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-7.png" />
+    <Content Include="Landing_Page\assets\img\clients\client-8.png" />
+    <Content Include="Landing_Page\assets\img\cta-bg.jpg" />
+    <Content Include="Landing_Page\assets\img\favicon.png" />
+    <Content Include="Landing_Page\assets\img\hero-bg-abstract.jpg" />
+    <Content Include="Landing_Page\assets\img\hero-img.svg" />
+    <Content Include="Landing_Page\assets\img\portfolio\app-1.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\app-2.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\app-3.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\books-1.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\books-2.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\books-3.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\branding-1.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\branding-2.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\branding-3.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\product-1.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\product-2.jpg" />
+    <Content Include="Landing_Page\assets\img\portfolio\product-3.jpg" />
+    <Content Include="Landing_Page\assets\img\stats-img.svg" />
+    <Content Include="Landing_Page\assets\img\team\team-1.jpg" />
+    <Content Include="Landing_Page\assets\img\team\team-2.jpg" />
+    <Content Include="Landing_Page\assets\img\team\team-3.jpg" />
+    <Content Include="Landing_Page\assets\img\team\team-4.jpg" />
+    <Content Include="Landing_Page\assets\img\testimonials\testimonials-1.jpg" />
+    <Content Include="Landing_Page\assets\img\testimonials\testimonials-2.jpg" />
+    <Content Include="Landing_Page\assets\img\testimonials\testimonials-3.jpg" />
+    <Content Include="Landing_Page\assets\img\testimonials\testimonials-4.jpg" />
+    <Content Include="Landing_Page\assets\img\testimonials\testimonials-5.jpg" />
+    <Content Include="Landing_Page\assets\js\main.js" />
+    <Content Include="Landing_Page\assets\scss\Readme.txt" />
+    <Content Include="Landing_Page\assets\vendor\aos\aos.css" />
+    <Content Include="Landing_Page\assets\vendor\aos\aos.js" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Landing_Page\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Landing_Page\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Landing_Page\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Landing_Page\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Landing_Page\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Landing_Page\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Landing_Page\assets\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="Landing_Page\assets\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="Landing_Page\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Landing_Page\assets\vendor\purecounter\purecounter_vanilla.js" />
+    <Content Include="Landing_Page\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Landing_Page\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Landing_Page\forms\Readme.txt" />
+    <Content Include="OTP.aspx" />
+    <Content Include="Our_Partners_Page.aspx" />
+    <Content Include="Privacy_Policy_Page.aspx" />
+    <Content Include="Review_Page.aspx" />
+    <Content Include="Review_Page\assets\css\Accounts_page.css" />
+    <Content Include="Review_Page\assets\css\Comment.css" />
+    <Content Include="Review_Page\assets\css\FAQ_styling.css" />
+    <Content Include="Review_Page\assets\css\Favs.css" />
+    <Content Include="Review_Page\assets\css\Global_css.css" />
+    <Content Include="Review_Page\assets\css\Landing_Page_CSS.css" />
+    <Content Include="Review_Page\assets\css\main.css" />
+    <Content Include="Review_Page\assets\css\Safety_page.css" />
+    <Content Include="Review_Page\assets\css\Selected_Res_CSS.css" />
+    <Content Include="Review_Page\assets\css\style_filters.css" />
+    <Content Include="Review_Page\assets\css\Swiper.css" />
+    <Content Include="Review_Page\assets\css\User_inbox.css" />
+    <Content Include="Review_Page\assets\css\variables.css" />
+    <Content Include="Review_Page\assets\img\apex1.jpg" />
+    <Content Include="Review_Page\assets\img\apex2.jpg" />
+    <Content Include="Review_Page\assets\img\apex3.jpg" />
+    <Content Include="Review_Page\assets\img\apex4.jpg" />
+    <Content Include="Review_Page\assets\img\bornfree1.jpg" />
+    <Content Include="Review_Page\assets\img\bornfree2.jpg" />
+    <Content Include="Review_Page\assets\img\bornfree3.jpg" />
+    <Content Include="Review_Page\assets\img\ca1.jpg" />
+    <Content Include="Review_Page\assets\img\ca2.jpg" />
+    <Content Include="Review_Page\assets\img\ca3.jpg" />
+    <Content Include="Review_Page\assets\img\FAQ.png" />
+    <Content Include="Review_Page\assets\img\Faq__image.jpg" />
+    <Content Include="Review_Page\assets\img\logo-black.png" />
+    <Content Include="Review_Page\assets\img\logo-no-background.png" />
+    <Content Include="Review_Page\assets\img\logo.png" />
+    <Content Include="Review_Page\assets\img\nsfas.png" />
+    <Content Include="Review_Page\assets\img\profile.png" />
+    <Content Include="Review_Page\assets\img\Res4u__image__back.png" />
+    <Content Include="Review_Page\assets\img\SP_1.jpg" />
+    <Content Include="Review_Page\assets\img\SP_1_auto_x2.jpg" />
+    <Content Include="Review_Page\assets\img\SP_2_auto_x2_light_ai.jpg" />
+    <Content Include="Review_Page\assets\img\SP_3_auto_x2_light_ai.jpg" />
+    <Content Include="Review_Page\assets\img\SP_4_auto_x2_light_ai.jpg" />
+    <Content Include="Review_Page\assets\img\SP_5.png" />
+    <Content Include="Review_Page\assets\img\student_bg.jpg" />
+    <Content Include="Review_Page\assets\js\Accounts.js" />
+    <Content Include="Review_Page\assets\js\FAQ.js" />
+    <Content Include="Review_Page\assets\js\favourites.js" />
+    <Content Include="Review_Page\assets\js\landing_page.js" />
+    <Content Include="Review_Page\assets\js\main.js" />
+    <Content Include="Review_Page\assets\js\Review_Page.js" />
+    <Content Include="Review_Page\assets\js\Safety_page.js" />
+    <Content Include="Review_Page\assets\js\script_filters.js" />
+    <Content Include="Review_Page\assets\js\Selected_res.js" />
+    <Content Include="Review_Page\assets\js\User_inbox_js.js" />
+    <Content Include="Review_Page\assets\scss\Readme.txt" />
+    <Content Include="Review_Page\assets\Stars\star.png" />
+    <Content Include="Review_Page\assets\Stars\Star_full.png" />
+    <Content Include="Safety_Page.aspx" />
+    <Content Include="Scripts\bootstrap.bundle.js" />
+    <Content Include="Scripts\bootstrap.bundle.min.js" />
+    <Content Include="Scripts\bootstrap.esm.js" />
+    <Content Include="Scripts\bootstrap.esm.min.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Scripts\WebForms\DetailsView.js" />
+    <Content Include="Scripts\WebForms\Focus.js" />
+    <Content Include="Scripts\WebForms\GridView.js" />
+    <Content Include="Scripts\WebForms\Menu.js" />
+    <Content Include="Scripts\WebForms\MenuStandards.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxApplicationServices.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxComponentModel.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxCore.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxGlobalization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxHistory.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxNetwork.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxSerialization.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxTimer.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebServices.js" />
+    <Content Include="Scripts\WebForms\SmartNav.js" />
+    <Content Include="Scripts\WebForms\TreeView.js" />
+    <Content Include="Scripts\WebForms\WebForms.js" />
+    <Content Include="Scripts\WebForms\WebParts.js" />
+    <Content Include="Scripts\WebForms\WebUIValidation.js" />
+    <Content Include="SignIn.aspx" />
+    <Content Include="SignUp.aspx" />
+    <Content Include="Sign_In.aspx" />
+    <Content Include="Sign_Up.aspx" />
+    <Content Include="Terms_n_Con_Page.aspx" />
+    <Content Include="User_Inbox.aspx" />
+    <Content Include="Review_Page\assets\vendor\aos\aos.css" />
+    <Content Include="Review_Page\assets\vendor\aos\aos.js" />
+    <Content Include="Review_Page\assets\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="Review_Page\assets\vendor\glightbox\css\glightbox.css" />
+    <Content Include="Review_Page\assets\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="Review_Page\assets\vendor\glightbox\css\plyr.css" />
+    <Content Include="Review_Page\assets\vendor\glightbox\css\plyr.min.css" />
+    <Content Include="Review_Page\assets\vendor\glightbox\js\glightbox.js" />
+    <Content Include="Review_Page\assets\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="Review_Page\assets\vendor\php-email-form\validate.js" />
+    <Content Include="Review_Page\assets\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="Review_Page\assets\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Review_Page\forms\Readme.txt" />
+    <Content Include="Web.config" />
+    <Content Include="Selected_Res.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Accounts_Page.aspx.cs">
+      <DependentUpon>Accounts_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Accounts_Page.aspx.designer.cs">
+      <DependentUpon>Accounts_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ContactUs.aspx.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ContactUs.aspx.designer.cs">
+      <DependentUpon>ContactUs.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="FAQ.aspx.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="FAQ.aspx.designer.cs">
+      <DependentUpon>FAQ.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Favourites_Page.aspx.cs">
+      <DependentUpon>Favourites_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Favourites_Page.aspx.designer.cs">
+      <DependentUpon>Favourites_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ForgotPassword.aspx.designer.cs">
+      <DependentUpon>ForgotPassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Landing_Page.aspx.cs">
+      <DependentUpon>Landing_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Landing_Page.aspx.designer.cs">
+      <DependentUpon>Landing_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="OTP.aspx.cs">
+      <DependentUpon>OTP.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="OTP.aspx.designer.cs">
+      <DependentUpon>OTP.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Our_Partners_Page.aspx.cs">
+      <DependentUpon>Our_Partners_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Our_Partners_Page.aspx.designer.cs">
+      <DependentUpon>Our_Partners_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Privacy_Policy_Page.aspx.cs">
+      <DependentUpon>Privacy_Policy_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Privacy_Policy_Page.aspx.designer.cs">
+      <DependentUpon>Privacy_Policy_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Review_Page.aspx.cs">
+      <DependentUpon>Review_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Review_Page.aspx.designer.cs">
+      <DependentUpon>Review_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Safety_Page.aspx.cs">
+      <DependentUpon>Safety_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Safety_Page.aspx.designer.cs">
+      <DependentUpon>Safety_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignIn.aspx.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignIn.aspx.designer.cs">
+      <DependentUpon>SignIn.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="SignUp.aspx.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="SignUp.aspx.designer.cs">
+      <DependentUpon>SignUp.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_In.aspx.cs">
+      <DependentUpon>Sign_In.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign_In.aspx.designer.cs">
+      <DependentUpon>Sign_In.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_Up.aspx.cs">
+      <DependentUpon>Sign_Up.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sign_Up.aspx.designer.cs">
+      <DependentUpon>Sign_Up.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Terms_n_Con_Page.aspx.cs">
+      <DependentUpon>Terms_n_Con_Page.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Terms_n_Con_Page.aspx.designer.cs">
+      <DependentUpon>Terms_n_Con_Page.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="User_Inbox.aspx.cs">
+      <DependentUpon>User_Inbox.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="User_Inbox.aspx.designer.cs">
+      <DependentUpon>User_Inbox.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Selected_Res.aspx.cs">
+      <DependentUpon>Selected_Res.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Selected_Res.aspx.designer.cs">
+      <DependentUpon>Selected_Res.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Landing_Page\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap-icons\bootstrap-icons.scss" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Landing_Page\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Landing_Page\assets\vendor\purecounter\purecounter_vanilla.js.map" />
+    <Content Include="Landing_Page\assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <Content Include="Landing_Page\forms\contact.php" />
+    <Content Include="images\.DS_Store" />
+    <Content Include="js\.DS_Store" />
+    <Content Include="Authentication\css\.DS_Store" />
+    <Content Include="Authentication\css\bootstrap\.DS_Store" />
+    <Content Include="Authentication\css\bootstrap\mixins\.DS_Store" />
+    <Content Include="Authentication\fonts\.DS_Store" />
+    <Content Include="Authentication\images\.DS_Store" />
+    <Content Include="Authentication\js\.DS_Store" />
+    <Content Include="Authentication\scss\.DS_Store" />
+    <Content Include="Authentication\scss\bootstrap\.DS_Store" />
+    <Content Include="Authentication\scss\bootstrap\bootstrap-grid.scss" />
+    <Content Include="Authentication\scss\bootstrap\bootstrap-reboot.scss" />
+    <Content Include="Authentication\scss\bootstrap\bootstrap.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_alert.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_background-variant.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_badge.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_border-radius.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_box-shadow.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_breakpoints.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_buttons.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_caret.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_clearfix.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_deprecate.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_float.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_forms.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_gradients.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_grid-framework.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_grid.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_hover.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_image.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_list-group.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_lists.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_nav-divider.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_pagination.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_reset-text.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_resize.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_screen-reader.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_size.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_table-row.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_text-emphasis.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_text-hide.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_text-truncate.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_transition.scss" />
+    <Content Include="Authentication\scss\bootstrap\mixins\_visibility.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_align.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_background.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_borders.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_clearfix.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_display.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_embed.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_flex.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_float.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_overflow.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_position.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_screenreaders.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_shadows.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_sizing.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_spacing.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_stretched-link.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_text.scss" />
+    <Content Include="Authentication\scss\bootstrap\utilities\_visibility.scss" />
+    <Content Include="Authentication\scss\bootstrap\vendor\_rfs.scss" />
+    <Content Include="Authentication\scss\bootstrap\_alert.scss" />
+    <Content Include="Authentication\scss\bootstrap\_badge.scss" />
+    <Content Include="Authentication\scss\bootstrap\_breadcrumb.scss" />
+    <Content Include="Authentication\scss\bootstrap\_button-group.scss" />
+    <Content Include="Authentication\scss\bootstrap\_buttons.scss" />
+    <Content Include="Authentication\scss\bootstrap\_card.scss" />
+    <Content Include="Authentication\scss\bootstrap\_carousel.scss" />
+    <Content Include="Authentication\scss\bootstrap\_close.scss" />
+    <Content Include="Authentication\scss\bootstrap\_code.scss" />
+    <Content Include="Authentication\scss\bootstrap\_custom-forms.scss" />
+    <Content Include="Authentication\scss\bootstrap\_dropdown.scss" />
+    <Content Include="Authentication\scss\bootstrap\_forms.scss" />
+    <Content Include="Authentication\scss\bootstrap\_functions.scss" />
+    <Content Include="Authentication\scss\bootstrap\_grid.scss" />
+    <Content Include="Authentication\scss\bootstrap\_images.scss" />
+    <Content Include="Authentication\scss\bootstrap\_input-group.scss" />
+    <Content Include="Authentication\scss\bootstrap\_jumbotron.scss" />
+    <Content Include="Authentication\scss\bootstrap\_list-group.scss" />
+    <Content Include="Authentication\scss\bootstrap\_media.scss" />
+    <Content Include="Authentication\scss\bootstrap\_mixins.scss" />
+    <Content Include="Authentication\scss\bootstrap\_modal.scss" />
+    <Content Include="Authentication\scss\bootstrap\_nav.scss" />
+    <Content Include="Authentication\scss\bootstrap\_navbar.scss" />
+    <Content Include="Authentication\scss\bootstrap\_pagination.scss" />
+    <Content Include="Authentication\scss\bootstrap\_popover.scss" />
+    <Content Include="Authentication\scss\bootstrap\_print.scss" />
+    <Content Include="Authentication\scss\bootstrap\_progress.scss" />
+    <Content Include="Authentication\scss\bootstrap\_reboot.scss" />
+    <Content Include="Authentication\scss\bootstrap\_root.scss" />
+    <Content Include="Authentication\scss\bootstrap\_spinners.scss" />
+    <Content Include="Authentication\scss\bootstrap\_tables.scss" />
+    <Content Include="Authentication\scss\bootstrap\_toasts.scss" />
+    <Content Include="Authentication\scss\bootstrap\_tooltip.scss" />
+    <Content Include="Authentication\scss\bootstrap\_transitions.scss" />
+    <Content Include="Authentication\scss\bootstrap\_type.scss" />
+    <Content Include="Authentication\scss\bootstrap\_utilities.scss" />
+    <Content Include="Authentication\scss\bootstrap\_variables.scss" />
+    <Content Include="Authentication\scss\style.scss" />
+    <None Include="packages.config" />
+    <Content Include="Review_Page\assets\css\Poppins-Regular.ttf" />
+    <Content Include="Review_Page\assets\css\QuicksandRegular.ttf" />
+    <Content Include="Review_Page\assets\css\VollkornBold.ttf" />
+    <Content Include="Review_Page\assets\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="Review_Page\assets\vendor\bootstrap-icons\bootstrap-icons.scss" />
+    <Content Include="Review_Page\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="Review_Page\assets\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="Review_Page\assets\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="Review_Page\assets\vendor\swiper\swiper-bundle.min.js.map" />
+    <Content Include="Review_Page\forms\contact.php" />
+    <Content Include="Scripts\bootstrap.bundle.js.map" />
+    <Content Include="Scripts\bootstrap.bundle.min.js.map" />
+    <Content Include="Scripts\bootstrap.esm.js.map" />
+    <Content Include="Scripts\bootstrap.esm.min.js.map" />
+    <Content Include="Scripts\bootstrap.js.map" />
+    <Content Include="Scripts\bootstrap.min.js.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>56542</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44309/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

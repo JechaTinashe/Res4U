@@ -1,0 +1,414 @@
+﻿body {
+}
+@font-face {
+    font-family: Poppins;
+    src: url(Poppins-Regular.ttf);
+}
+.Selected__res-text {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #F9193E;
+}
+.Selected__res__wrap {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1%;
+}
+.write__review__btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    color: #F9193E;
+}
+    .write__review__btn button {
+        font-family: 'Poppins';
+        font-style: normal;
+        font-weight: 500;
+        font-size: 20px;
+        color: #F9193E;
+        background: none;
+        border: 1px solid rgb(234 72 131 / 25%);
+        border-radius: 10px;
+        transition: 0.3s ease-in;
+    }
+    .write__review__btn:hover {
+        box-shadow: 1px 2px 2px 2px rgb(234 72 131 / 25%);
+        border-radius: 10px;
+    }
+.NumberOfReviews {
+    position: absolute;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 300;
+    font-size: 13px;
+    color: #F9193E;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+.comment {
+    display: flex;
+    border: 2.3px solid rgba(249, 25, 62, 0.11);
+    padding: 5px 15px;
+    border-radius:5px;
+}
+.comment:hover{
+    background: rgba(0,0,0,0.03);
+}
+comment a {
+    color:#1b94e0;
+    text-decoration: none;
+}
+.comment a:hover{
+    text-decoration: underline;
+
+}
+.comment__content {
+    font-family: Poppins;
+    font-size: 15px;
+    width: 100%;
+}
+.comment__profile-logo{
+    width:35px;
+    height:35px;
+    border-radius:50%;
+    margin-right:10px;
+}
+.comment__header{
+    display: flex;
+    justify-content: space-between;
+}
+.comment__stdnt-name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #293558;
+    font-family:Poppins;
+    /*margin-right:5px;*/
+}
+.comment__stdnt-slug {
+    color: #293558;
+    font-size: 15px;
+    position: fixed;
+    left: calc(35% - 100px);
+    width:90px;
+    margin:0px 40px;
+}
+.comment__published-time {
+    margin-left: 5px;
+    color: #293558;
+    font-family: Poppins;
+}
+
+/*Upvote button*/
+.upvote__header{
+    display: flex;
+    justify-content: space-between;
+}
+.upvote__button {
+    display: inline-block;
+    float:left;
+}
+.button__vote__down {
+    background: none;
+    font-size: 20px;
+    color: #95a5a6;
+    border: 1.5px solid #293558;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+.button__vote__up {
+    background: none;
+    font-size: 20px;
+    color: #95a5a6;
+    border-left: 1.5px solid #293558;
+    border-top: 1.5px solid #293558;
+    border-bottom: 1.5px solid #293558;
+    border-right: none;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    padding-right:10px;
+    float:left;
+}
+.number_of_votes {
+    font-size: 18px;
+    background: none;
+    margin-left: 0px;
+    margin-right: 0px;
+    padding-right: 3px;
+    padding-left: 0px;
+    padding-top: 3px;
+    padding-bottom: 2px;
+    border-top: 1.5px solid #293558;
+    border-bottom: 1.5px solid #293558;
+    float: left;
+    width: calc(% - 50px);
+    font-family: Poppins;
+}
+.reply__text {
+    position: absolute;
+    left: 35vh;
+    margin-top: 3px;
+    min-width: 40px;
+    font-family: Poppins;
+}
+.reply__text_btn {
+    font-size: 15px;
+    font-family: 'Poppins';
+    color: #293558;
+    font-weight: 700;
+    background: none;
+    border: none;
+}
+.report__button {
+    float:right;
+}
+.report__button_btn {
+    font-size: 17px;
+    color: #293558;
+    background: none;
+    border: none;
+    font-family: Poppins;
+}
+
+/*Reply styling*/
+.reply__comment {
+    display: flex;
+    padding: 15px 0px 15px 10px;
+}
+.reply__header {
+    display: flex;
+    justify-content: space-between;
+}
+.reply__name {
+    font-size: 13px;
+    font-weight: 700;
+    color: #293558;
+    font-family: Poppins;
+}
+.reply__time {
+    color: #293558;
+    text-align:right;
+}
+.reply__logo {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+.reply__content{
+    font-family:'Poppins';
+    font-size: 15px;
+    width:100%;
+}
+.view__more__comments{
+    display:flex;
+    justify-content: center;
+}
+.view__more_btn {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 20px;
+    color: #293558;
+    text-align: center;
+    padding: 15px 20%;
+    background: none;
+    border-radius: 10px;
+    border: 1px solid #000000;
+}
+    .view__more_btn:hover {
+        background: rgba(0,0,0,0.03);
+    }
+/*Reply Modal*/
+.name_N_close_btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid;
+}
+.reply_to_name_style {
+    color: #a6a6a6d1;
+    font-weight: 700;
+}
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(113 113 113 / 40%);
+    backdrop-filter: blur(3px);
+    font-family: Poppins;
+}
+.modalTitle {
+    padding: 10px 0px;
+}
+
+.modal-content {
+    background-color: #fcfcfc;
+    padding: 5px 15px 15px 15px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 530px;
+    font-family: Poppins;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 0;
+}
+.reply__to__name {
+    font-size: 13px;
+    color: #293558;
+    font-family: Poppins;
+}
+
+.close {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #F9193E;
+}
+
+textarea {
+    width: 100%;
+    height: 100px;
+    resize: none;
+    font-family: Poppins;
+    border: 1px solid;
+    box-shadow: 3px 15px 20px -9px rgba(var(--color-black-rgb), 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+.send_reply {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    padding: 15px 15%;
+    background-color: #F9193E;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px 5px;
+    border: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.send_reply:hover {
+    color: #151B2C;
+}
+
+
+modal button {
+    margin-top: 10px;
+}
+
+/*Reply Modal*/
+
+/*Write Review Modal*/
+.modal__write_review {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(113 113 113 / 40%);
+    backdrop-filter: blur(3px);
+    font-family: Poppins;
+}
+.close__btn {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.consent {
+    font-weight:300;
+    font-size: 12px;
+    padding: 10px 0px;
+    text-align: center;
+}
+
+.modal__content {
+    background-color: #fcfcfc;
+    padding: 5px 15px 15px 15px;
+    border: 1px solid #888;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    font-family: Poppins;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20%;
+    margin-bottom: 0;
+}
+
+.reply__to__name {
+    font-size: 20px;
+    color: #293558;
+    font-family: Poppins;
+    font-weight: 600;
+}
+
+.close__write__review__modal {
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #F9193E;
+}
+.btn_send_review_wrap{
+    display:flex;
+    justify-content: flex-end;
+}
+textarea {
+    width: 100%;
+    height: 165px;
+    resize: none;
+    font-family: Poppins;
+    border: 1px solid;
+    box-shadow: 3px 15px 20px -9px rgba(var(--color-black-rgb), 0.1);
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.send_reply {
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 20px;
+    color: #fff;
+    padding: 15px 15%;
+    background-color: #F9193E;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 1px 1px 0 rgba(0, 0, 0, 0.2), 0 1px 5px 0 rgba(0, 0, 0, 0.19);
+    margin: 5px 5px;
+    border: none;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+    .send_reply:hover {
+        color: #151B2C;
+    }
+
+
+modal button {
+    margin-top: 10px;
+}
+
+/* End Write Review Modal*/
